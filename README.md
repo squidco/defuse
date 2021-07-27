@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Defuse!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is a BOMB! Not really. Maybe. It's designed to do two things: blow up or be defused.
 
-## Available Scripts
+# Installation
 
-In the project directory, you can run:
+Not much to do here just run the site [here](link).
 
-### `npm start`
+# Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Enter a custom value in the time entry field or select one the buttons to use a preset value. 
+You can also set your own preset values that will be saved in local storage. You may also select a custom delay before the bomb activates as a sort of preround timer. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshot here
 
-### `npm test`
+After the delay finishes its countdown the bomb timer will start. When the bomb timer finishes its countdown the bomb explodes and the round ends.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots here
 
-### `npm run build`
+If an attacker makes it to the bomb they can activate the defuse sequence which will start either a timer or a sequence of events:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshot of timer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshot of sequence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The events are interactible and will deactivate the bomb if all done properly and in the correct order. The timer will simply count down unless the defenders "destroy" it.
 
-### `npm run eject`
+## Screenshot of destroy button
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you think of a way to make this better add a pull request and I will review it!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# License 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://opensource.org/licenses/MIT)
