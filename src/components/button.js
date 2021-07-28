@@ -1,35 +1,43 @@
-const { useState } = require("react")
+import TimeDisplay from "./TimeDisplay"
+
+const { useState, useEffect, useRef } = require("react")
 
 function Button({ defuseTime, buttonText }) {
     const [time, setTime] = useState(defuseTime)
     const [hold, setHold] = useState(false)
+    const timer = useRef(null)
 
-
-    if (hold === true) {
-        var what = setTimeout(() => {
-            setTime(time - .1)
-            console.log(time)
+    useEffect(() => {
+        if (hold) {
+            timer.current = setInterval(() => {
+                setTime(prevState => (prevState - .1).toFixed(1))
+            }
+                , 100)
+        } else {
+            stopTimer(timer.current)
         }
-            , 100)
+    }, [hold])
+
+    function stopTimer(timer) {
+        clearInterval(timer)
     }
 
-    if (hold === false) {
-        clearTimeout(what)
-    }
-
-    if (time < 0) {
-        clearTimeout(what)
+    if (parseFloat(time) === 0) {
+        stopTimer(timer.current)
         return null
     }
 
     return (
-        <div>
-            <button onMouseDown={(e) => {
-                setHold(true)
-            }} onMouseUp={() => {
-                setHold(false)
-            }}>{buttonText}</button>
-        </div>
+        <>
+            <TimeDisplay time={time}></TimeDisplay>
+            <div>
+                <button onMouseDown={() => {
+                    setHold(true)
+                }} onMouseUp={() => {
+                    setHold(false)
+                }}>{buttonText}</button>
+            </div>
+        </>
     )
 }
 export default Button
