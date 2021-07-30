@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/defuse/static/css/main.a617e044.chunk.css",
+    "main.js": "/defuse/static/js/main.5689bbba.chunk.js",
+    "main.js.map": "/defuse/static/js/main.5689bbba.chunk.js.map",
+    "runtime-main.js": "/defuse/static/js/runtime-main.2737b85d.js",
+    "runtime-main.js.map": "/defuse/static/js/runtime-main.2737b85d.js.map",
+    "static/js/2.d161acd2.chunk.js": "/defuse/static/js/2.d161acd2.chunk.js",
+    "static/js/2.d161acd2.chunk.js.map": "/defuse/static/js/2.d161acd2.chunk.js.map",
+    "static/js/3.ace32ef1.chunk.js": "/defuse/static/js/3.ace32ef1.chunk.js",
+    "static/js/3.ace32ef1.chunk.js.map": "/defuse/static/js/3.ace32ef1.chunk.js.map",
+    "index.html": "/defuse/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/defuse/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.d161acd2.chunk.js.LICENSE.txt": "/defuse/static/js/2.d161acd2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2737b85d.js",
+    "static/js/2.d161acd2.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.5689bbba.chunk.js"
+  ]
+}
