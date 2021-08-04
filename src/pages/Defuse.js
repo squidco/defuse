@@ -1,18 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BombTimer from '../components/BombTimer';
 import DefuseTimer from '../components/DefuseTimer';
+import EndScreen from '../components/EndScreen';
 
 function Defuse({ form }) {
     const [renderDefuser, setRenderDefuser] = useState(false)
     const [defuserDestroyed, setDefuserDestroyed] = useState(false)
+    const [endCondition, setEndCondition] = useState("")
 
+    useEffect(() => {
+        console.log(endCondition)
+    }, [endCondition])
 
-    function proxy2() {
-        console.log("proxy2")
+    function updateEndCond(newState){
+        setEndCondition(newState)
     }
 
-    function proxy() {
-        defuserSet()
+    function proxy(){
+        setDefuserDestroyed(true)
     }
 
     function defuserSet() {
@@ -22,8 +27,9 @@ function Defuse({ form }) {
 
     return (
         <>
-            {!renderDefuser && <BombTimer bombTime={form.roundTime} buttonCallBack={proxy} />}
-            {renderDefuser && <DefuseTimer defuseTime={form.defuseTime} buttonCallBack={proxy2} defuserDestroyed={defuserDestroyed} />}
+            {!renderDefuser && <BombTimer bombTime={form.roundTime} buttonCallBack={defuserSet} updateEndCond={updateEndCond}/>}
+            {renderDefuser && <DefuseTimer defuseTime={form.defuseTime} buttonCallBack={proxy} updateEndCond={updateEndCond} defuserDestroyed={defuserDestroyed} />}
+            {endCondition !== "" && <EndScreen>{endCondition}</EndScreen>}
         </>
     )
 

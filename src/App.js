@@ -8,8 +8,6 @@ import Landing from './pages/Landing';
 function App() {
   const [form, setForm] = useState({})
   const [renderGame, setRenderGame] = useState(false)
-  const [renderDefuser, setRenderDefuser] = useState(false)
-  const [defuserDestroyed, setDefuserDestroyed] = useState(false)
 
   function handleInput(e) {
     const { name, value } = e.target
@@ -19,18 +17,6 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault()
     setRenderGame(true)
-  }
-
-  function proxy2() {
-    console.log("proxy2")
-  }
-
-  function proxy() {
-    defuserSet()
-  }
-
-  function defuserSet() {
-    setRenderDefuser(true)
   }
 
   return (

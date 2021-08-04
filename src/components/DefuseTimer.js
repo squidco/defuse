@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import TimeDisplay from "./TimeDisplay"
 import Button from "./Button"
 
-function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed }) {
+function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed, updateEndCond }) {
     const [newDefuseTime, setnewDefuseTime] = useState(defuseTime)
     const timer = useRef(null)
     useEffect(() => {
@@ -15,11 +15,13 @@ function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed }) {
 
     if(defuserDestroyed){
         clearInterval(timer.current)
+        updateEndCond("Defenders")
         return null
     }
 
     if (newDefuseTime === 0) {
         clearInterval(timer.current)
+        updateEndCond("Attackers")
         return null
     }
     return (

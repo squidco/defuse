@@ -1,8 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import TimeDisplay from "./TimeDisplay";
 import Button from "./Button";
+import EndScreen from "./EndScreen";
 
-function BombTimer({ bombTime, buttonCallBack, defuserSet }) {
+function BombTimer({ bombTime, buttonCallBack, defuserSet, updateEndCond }) {
     const [newBombTime, setNewBombTime] = useState(bombTime)
     const timer = useRef(null)
     useEffect(() => {
@@ -21,6 +22,7 @@ function BombTimer({ bombTime, buttonCallBack, defuserSet }) {
 
     if (newBombTime === 0) {
         clearInterval(timer.current)
+        updateEndCond("Defenders")
         return null
     }
     return (
