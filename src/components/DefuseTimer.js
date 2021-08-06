@@ -11,6 +11,8 @@ function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed, updateEndCo
             setnewDefuseTime(prevState => (prevState - 1))
         }, 1000)
 
+        return null
+
     }, [])
 
     if(defuserDestroyed){

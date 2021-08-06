@@ -3,7 +3,7 @@ import BombTimer from '../components/BombTimer';
 import DefuseTimer from '../components/DefuseTimer';
 import EndScreen from '../components/EndScreen';
 
-function Defuse({ form }) {
+function Defuse({ form, reset }) {
     const [renderDefuser, setRenderDefuser] = useState(false)
     const [defuserDestroyed, setDefuserDestroyed] = useState(false)
     const [endCondition, setEndCondition] = useState("")
@@ -24,12 +24,11 @@ function Defuse({ form }) {
         setRenderDefuser(true)
     }
 
-
     return (
         <>
             {!renderDefuser && <BombTimer bombTime={form.roundTime} buttonCallBack={defuserSet} updateEndCond={updateEndCond}/>}
             {renderDefuser && <DefuseTimer defuseTime={form.defuseTime} buttonCallBack={proxy} updateEndCond={updateEndCond} defuserDestroyed={defuserDestroyed} />}
-            {endCondition !== "" && <EndScreen>{endCondition}</EndScreen>}
+            {endCondition !== "" && <EndScreen reset={reset}>{endCondition}</EndScreen>}
         </>
     )
 

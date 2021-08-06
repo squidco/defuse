@@ -21,6 +21,7 @@ function Button({ holdTime, buttonText, callBack }) {
         } else {
             stopTimer(timer.current)
         }
+        return null
         //States condition for rerunning code
     }, [hold])
 

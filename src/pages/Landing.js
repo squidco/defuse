@@ -7,10 +7,10 @@ function Landing({change, submit, pForm}) {
                         <label htmlFor="roundTime">Round Time</label>
                         <input value={pForm.roundTime || ""} name="roundTime" type="text" onChange={change}></input>
                     </div>
-                    <div>
+                    {/* <div>
                         <label htmlFor="delay">Delay</label>
                         <input value={pForm.delay || ""} name="delay" type="text" onChange={change}></input>
-                    </div>
+                    </div> */}
                     <div>
                         <label htmlFor="defuseTime">Defuse Time</label>
                         <input value={pForm.defuseTime || ""} name="defuseTime" type="text" onChange={change}></input>
