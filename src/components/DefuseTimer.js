@@ -6,7 +6,6 @@ function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed, updateEndCo
     const [newDefuseTime, setnewDefuseTime] = useState(defuseTime)
     const timer = useRef(null)
     useEffect(() => {
-        console.log(defuseTime);
         timer.current = setInterval(() => {
             setnewDefuseTime(prevState => (prevState - 1))
         }, 1000)

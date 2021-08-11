@@ -1,7 +1,8 @@
+//This is the component that is rendered after the renderGame state is changed to true.
+//It either waits for the bomb to time out or for the defuser be planted.
 import { useEffect, useState, useRef } from "react";
 import TimeDisplay from "./TimeDisplay";
 import Button from "./Button";
-import EndScreen from "./EndScreen";
 
 function BombTimer({ bombTime, buttonCallBack, defuserSet, updateEndCond }) {
     const [newBombTime, setNewBombTime] = useState(bombTime)

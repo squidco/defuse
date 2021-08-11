@@ -1,3 +1,4 @@
+//Kind of dumb that I named it Button. This is actually a HoldButton. So you can you know... hold it.
 import TimeDisplay from "./TimeDisplay"
 
 const { useState, useEffect, useRef } = require("react")
