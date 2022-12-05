@@ -4,7 +4,7 @@ This app is a BOMB! Not really. Maybe. It's designed to do two things: blow up o
 
 # Installation
 
-Not much to do here just run the site [here](link).
+Not much to do here just run the site [here](https://squiddotjpeg.github.io/defuse/).
 
 # Usage
 
