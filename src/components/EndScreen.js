@@ -1,8 +1,7 @@
-function EndScreen({ children, reset }) {
+function EndScreen({ children }) {
     return (
         <div>
             <p>{children} win!</p>
-            <button onClick={reset}>Reset Timer</button>
         </div>
     )
 }

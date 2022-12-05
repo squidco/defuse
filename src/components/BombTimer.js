@@ -1,36 +1,38 @@
 //This is the component that is rendered after the renderGame state is changed to true.
 //It either waits for the bomb to time out or for the defuser be planted.
 import { useEffect, useState, useRef } from "react";
-import TimeDisplay from "./TimeDisplay";
-import Button from "./Button";
 
-function BombTimer({ bombTime, buttonCallBack, defuserSet, updateEndCond }) {
-    const [newBombTime, setNewBombTime] = useState(bombTime)
-    const timer = useRef(null)
+
+function BombTimer({ time, setGameStage, setWinner, winner }) {
+    const [bombTime, setBombTime] = useState()
+    const timer = useRef()
+    // Use effect to start the bomb
     useEffect(() => {
         timer.current = setInterval(() => {
-            setNewBombTime(prevState => (prevState - 1))
+            setBombTime(prevState => (prevState - 1))
         }, 1000)
-
-        return null
-
     }, [])
 
-    if(defuserSet){
-        clearInterval(timer.current)
-        return null
-    }
+    useEffect(() => {
+        console.log(time)
+        setBombTime(time)
+    }, [time])
 
-    if (newBombTime === 0) {
-        clearInterval(timer.current)
-        updateEndCond("Defenders")
-        return null
-    }
+    // Use effect that checks every rerender if the bomb time is zero
+    useEffect(() => {
+        if (bombTime === 0) {
+            clearInterval(timer.current)
+            setWinner(winner)
+            setGameStage("winnerWinner")
+        }
+    }, [bombTime])
+
     return (
-        <div>
-            <TimeDisplay time={newBombTime} />
-            <Button holdTime={4} buttonText="Start Defuser" callBack={buttonCallBack}></Button>
-        </div>
+        <>
+            {bombTime !== 0 &&
+                <h1>{bombTime}</h1>
+            }
+        </>
     )
 }
 

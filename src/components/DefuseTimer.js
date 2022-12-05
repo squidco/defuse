@@ -2,12 +2,12 @@ import { useEffect, useState, useRef } from "react";
 import TimeDisplay from "./TimeDisplay"
 import Button from "./Button"
 
-function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed, updateEndCond }) {
-    const [newDefuseTime, setnewDefuseTime] = useState(defuseTime)
+function DefuseTimer({ time, buttonCallBack, defuserDestroyed, updateEndCond }) {
+    const [defuseTime, setDefuseTime] = useState(time)
     const timer = useRef(null)
     useEffect(() => {
         timer.current = setInterval(() => {
-            setnewDefuseTime(prevState => (prevState - 1))
+            setDefuseTime(prevState => (prevState - 1))
         }, 1000)
 
         return null
@@ -20,14 +20,14 @@ function DefuseTimer({ defuseTime, buttonCallBack, defuserDestroyed, updateEndCo
         return null
     }
 
-    if (newDefuseTime === 0) {
+    if (defuseTime === 0) {
         clearInterval(timer.current)
         updateEndCond("Attackers")
         return null
     }
     return (
         <div>
-            <TimeDisplay time={newDefuseTime} />
+            <TimeDisplay time={defuseTime} />
             <Button holdTime={7} buttonText="Destroy Defuser" callBack={buttonCallBack}></Button>
         </div>
     )
