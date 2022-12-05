@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-function PlantDefuser({ setGameStage }) {
+function PlantDefuser({ setGameStage, stage, setWinner, winner }) {
     const [time, setTime] = useState(7)
     const interval = useRef()
 
@@ -12,7 +12,8 @@ function PlantDefuser({ setGameStage }) {
     useEffect(() => {
         if (time === 0) {
             window.removeEventListener("mouseup", notPlanting)
-            setGameStage("defuserPlanted")
+            setWinner(winner)
+            setGameStage(stage)
         }
     }, [time])
 
