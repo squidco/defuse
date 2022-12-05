@@ -6,14 +6,19 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+//The basename is added because if it is not there ghpages
+//gets a 404
+//My idea is that the base url that react router reads stops at
+//https://squiddotjpeg.github.io/ but in order to access the right
+//ghpages environment it needs to read
+//https://squiddotjpeg.github.io/defuse/
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   }
-]);
+], { basename: "/defuse/" });
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,8 +26,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log);

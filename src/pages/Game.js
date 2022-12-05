@@ -12,7 +12,6 @@ function Game() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(roundTime, defuseTime)
         if (roundTime && defuseTime) {
             setGameStage("bombPlanted")
         }
