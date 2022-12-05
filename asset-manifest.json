@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/defuse/static/css/main.a72aafd4.chunk.css",
-    "main.js": "/defuse/static/js/main.732a921a.chunk.js",
-    "main.js.map": "/defuse/static/js/main.732a921a.chunk.js.map",
-    "runtime-main.js": "/defuse/static/js/runtime-main.669a756e.js",
-    "runtime-main.js.map": "/defuse/static/js/runtime-main.669a756e.js.map",
+    "main.js": "/defuse/static/js/main.6f96febc.chunk.js",
+    "main.js.map": "/defuse/static/js/main.6f96febc.chunk.js.map",
+    "runtime-main.js": "/defuse/static/js/runtime-main.72ae0aab.js",
+    "runtime-main.js.map": "/defuse/static/js/runtime-main.72ae0aab.js.map",
     "static/js/2.0b726db5.chunk.js": "/defuse/static/js/2.0b726db5.chunk.js",
     "static/js/2.0b726db5.chunk.js.map": "/defuse/static/js/2.0b726db5.chunk.js.map",
-    "static/js/3.bbbaf36d.chunk.js": "/defuse/static/js/3.bbbaf36d.chunk.js",
-    "static/js/3.bbbaf36d.chunk.js.map": "/defuse/static/js/3.bbbaf36d.chunk.js.map",
     "index.html": "/defuse/index.html",
     "static/css/main.a72aafd4.chunk.css.map": "/defuse/static/css/main.a72aafd4.chunk.css.map",
     "static/js/2.0b726db5.chunk.js.LICENSE.txt": "/defuse/static/js/2.0b726db5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.669a756e.js",
+    "static/js/runtime-main.72ae0aab.js",
     "static/js/2.0b726db5.chunk.js",
     "static/css/main.a72aafd4.chunk.css",
-    "static/js/main.732a921a.chunk.js"
+    "static/js/main.6f96febc.chunk.js"
   ]
 }
