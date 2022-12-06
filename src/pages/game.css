@@ -1,0 +1,54 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.bomb-display {
+    box-shadow: 0px 6px 5px black;
+    background-color: darkred;
+    padding: 40px 10px;
+    width: 200px;
+}
+
+.defuser-display {
+    box-shadow: 0px 6px 5px black;
+    background-color: rgb(0, 133, 186);
+    padding: 40px 10px;
+    width: 200px;
+}
+
+.edge-glow {
+    animation: pulse-red 1s infinite;
+}
+
+.edge-glow.blue {
+    animation: pulse-yellow 1s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0px 0px 20px red;
+    }
+    70% {
+        box-shadow: 0px 6px 5px black;
+    }
+    100% {
+        box-shadow: 0px 6px 5px black;
+    }
+}
+
+@keyframes pulse-yellow {
+    0% {
+        box-shadow: 0px 0px 20px rgb(255, 234, 0);
+    }
+    100% {
+        box-shadow: 0px 6px 5px black;
+    }
+}
+
+form {
+    box-shadow: 0px 6px 5px black;
+    background-color: darkred;
+    padding: 40px 10px;
+    width: 200px;
+}

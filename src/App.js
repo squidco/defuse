@@ -4,7 +4,9 @@ import Game from './pages/Game';
 function App() {
 
   return (
-    <Game />
+    <div className='main'>
+      <Game />
+    </div>
   );
 }
 
