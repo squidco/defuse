@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./plantDefuser.css"
 
 function PlantDefuser({ setGameStage, stage, setWinner, winner }) {
     const [time, setTime] = useState(7)
@@ -30,7 +31,7 @@ function PlantDefuser({ setGameStage, stage, setWinner, winner }) {
     }
 
     return (
-        <button onMouseDown={planting}>Press and Hold</button>
+        <button className="plant-defuse-btn" onMouseDown={planting}></button>
     )
 }
 

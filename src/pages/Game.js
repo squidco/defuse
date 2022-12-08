@@ -41,7 +41,7 @@ function Game() {
                 </div>
             )
         case "defuserPlanted":
-            return (<div className="defuser-display edge-glow yellow">
+            return (<div className="defuser-display edge-glow yellow input-group">
                 <BombTimer time={defuseTime} setGameStage={setGameStage} setWinner={setWinner} winner={"Attackers"} />
                 <PlantDefuser setGameStage={setGameStage} stage={"winnerWinner"} setWinner={setWinner} winner={"Defenders"} />
             </div>)

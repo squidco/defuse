@@ -1,7 +1,7 @@
 //This is the component that is rendered after the renderGame state is changed to true.
 //It either waits for the bomb to time out or for the defuser be planted.
 import { useEffect, useState, useRef } from "react";
-
+import "./bombtimer.css"
 
 function BombTimer({ time, setGameStage, setWinner, winner }) {
     const [bombTime, setBombTime] = useState()
@@ -30,7 +30,7 @@ function BombTimer({ time, setGameStage, setWinner, winner }) {
     return (
         <>
             {bombTime !== 0 &&
-                <h1>{bombTime}</h1>
+                <h1 className="time">{bombTime}</h1>
             }
         </>
     )
