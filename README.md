@@ -14,10 +14,13 @@ If the bomb goes off the defenders win but you can also hold down the big red bu
 If you plant the defuser as an attacker a new timer will start and at at the end of that countdown the attackers will win
 The defenders will have to "destroy the defuser" in order to win the round 
 
+### The settings page
 ![screenshot of the landing page with round time and defuse time](./src/assets/images/Defuse-.png)
 
+### Bomb Timer
 ![screenshot of bomb planted](./src/assets/images/bomb-timer.png)
 
+### Defuser Timer
 ![screenshot of defuser planted](./src/assets/images/defuse-timer.png)
 
 # Contributing
