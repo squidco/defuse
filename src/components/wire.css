@@ -2,22 +2,33 @@
     width: 70vw;
     height: 10px;
     background: rgb(0, 193, 0);
-    box-shadow: 0px 3px 3px black;
+    box-shadow: 1px 1px 3px 0px black;
     position: absolute;
     top: 30%;
     left: 15%;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 2;
 }
 
-.dot {
+.dot-1 {
     background: gray;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     content: "";
     position: absolute;
-    top: -33%;
-    left: -1%;
-    z-index: -1;
+    top: 29.5%;
+    left: 14%;
+    z-index: 1;
+}
+.dot-2 {
+    background: gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 29.5%;
+    right: 14%;
+    z-index: 1;
 }
