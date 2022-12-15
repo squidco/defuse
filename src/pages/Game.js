@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import BombTimer from "../components/BombTimer"
 import EndScreen from "../components/EndScreen"
 import PlantDefuser from "../components/PlantDefuser"
+import Wire from "../components/Wire"
 import "./game.css"
 
 function Game() {
@@ -35,10 +36,13 @@ function Game() {
             )
         case "bombPlanted":
             return (
-                <div className="bomb-display edge-glow input-group">
-                    <BombTimer time={roundTime} setGameStage={setGameStage} setWinner={setWinner} winner={"Defenders"} />
-                    <PlantDefuser setGameStage={setGameStage} stage={"defuserPlanted"} setWinner={setWinner} winner={"Attackers"} />
-                </div>
+                <>
+                    <Wire></Wire>
+                    <div className="bomb-display edge-glow input-group">
+                        <BombTimer time={roundTime} setGameStage={setGameStage} setWinner={setWinner} winner={"Defenders"} />
+                        <PlantDefuser setGameStage={setGameStage} stage={"defuserPlanted"} setWinner={setWinner} winner={"Attackers"} />
+                    </div>
+                </>
             )
         case "defuserPlanted":
             return (<div className="defuser-display edge-glow yellow input-group">

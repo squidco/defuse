@@ -1,0 +1,23 @@
+.wire {
+    width: 70vw;
+    height: 10px;
+    background: rgb(0, 193, 0);
+    box-shadow: 0px 3px 3px black;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dot {
+    background: gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: -33%;
+    left: -1%;
+    z-index: -1;
+}
