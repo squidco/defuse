@@ -1,6 +1,6 @@
 # Defuse!
 
-This app is a BOMB! Not really. Maybe. It's designed to do two things: blow up or be defused.
+Defuse a bomb or defend it! This app allows you to set a timer for a bomb and start a round. It was made because I wanted to play Rainbow 6 Siege with my friends irl with nerf guns.
 
 # Installation
 
@@ -8,24 +8,20 @@ Not much to do here just run the site [here](https://squiddotjpeg.github.io/defu
 
 # Usage
 
-Enter a custom value in the time entry field or select one the buttons to use a preset value. 
-You can also set your own preset values that will be saved in local storage. You may also select a custom delay before the bomb activates as a sort of preround timer. 
+Enter a custom value in the time entry field
+After the times are set just hit the button to start the round and the bomb timer will start counting down
+If the bomb goes off the defenders win but you can also hold down the big red button to plant the defuser if you're an attacker
+If you plant the defuser as an attacker a new timer will start and at at the end of that countdown the attackers will win
+The defenders will have to "destroy the defuser" in order to win the round 
 
-## Screenshot here
+### The settings page
+![screenshot of the landing page with round time and defuse time](./src/assets/images/Defuse-.png)
 
-After the delay finishes its countdown the bomb timer will start. When the bomb timer finishes its countdown the bomb explodes and the round ends.
+### Bomb Timer
+![screenshot of bomb planted](./src/assets/images/bomb-timer.png)
 
-## Screenshots here
-
-If an attacker makes it to the bomb they can activate the defuse sequence which will start either a timer or a sequence of events:
-
-## Screenshot of timer
-
-## Screenshot of sequence
-
-The events are interactible and will deactivate the bomb if all done properly and in the correct order. The timer will simply count down unless the defenders "destroy" it.
-
-## Screenshot of destroy button
+### Defuser Timer
+![screenshot of defuser planted](./src/assets/images/defuse-timer.png)
 
 # Contributing
 
